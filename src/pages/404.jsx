@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { MainLayout } from '@/components/MainLayout';
 import classes from '@/styles/error.module.scss';
