@@ -19,11 +19,11 @@ export default function Index() {
   return (
     <GoodsContext.Provider value={{ goods, setGoods }}>
       <SearchContext.Provider value={{ search, setSearch }}>
-        <MainLayout title={search.searchValue}>
+        <MainLayout title={search.searchValue}>        
           <Params />
-          <OfferLayout />
+          <OfferLayout />        
         </MainLayout>
       </SearchContext.Provider>
-    </GoodsContext.Provider>  
+    </GoodsContext.Provider>
   );
 }
