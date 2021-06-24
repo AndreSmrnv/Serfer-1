@@ -27,12 +27,14 @@ export default function Index({ dataGoods }) {
   console.log(goods);
   return (
     <GoodsContext.Provider value={{ goods, setGoods }}>
+
       <SearchContext.Provider value={{ search, setSearch }}>
         <MainLayout title={search.searchValue}>        
           <Params />
           <OfferLayout />        
         </MainLayout>
       </SearchContext.Provider>
+
     </GoodsContext.Provider>
   );
 }
