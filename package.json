@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build:next": "next build",
+    "build:mock": "json-server -w db.json -p 4300 -d 450",
+    "build": "concurrently \"npm run build:next\" \"npm run mock\"",
     "start": "next start",
     "serve": "concurrently \"npm run dev\" \"npm run mock\"",
     "mock": "json-server -w db.json -p 4300 -d 450",
