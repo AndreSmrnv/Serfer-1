@@ -27,21 +27,14 @@ export default function Index({ dataGoods }) {
   console.log(goods);
   return (
     <GoodsContext.Provider value={{ goods, setGoods }}>
-<<<<<<< HEAD
 
-      <MainLayout title={search.searchValue}>
-        <Params />
-        <OfferLayout />
-      </MainLayout>
-
-=======
       <SearchContext.Provider value={{ search, setSearch }}>
         <MainLayout title={search.searchValue}>        
           <Params />
           <OfferLayout />        
         </MainLayout>
       </SearchContext.Provider>
->>>>>>> 875f27b (edit 404)
+
     </GoodsContext.Provider>
   );
 }
