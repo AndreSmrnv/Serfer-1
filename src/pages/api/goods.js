@@ -1,7 +1,4 @@
-
-
-import comments from '../goods.json'
-
+import  goods  from '@/constants/db/goods.json';
 
 export default (req, res) => {
     res.status(200).json(goods)
