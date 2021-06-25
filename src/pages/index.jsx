@@ -8,8 +8,8 @@ export default function Index({ dataGoods }) {
   console.log(dataGoods);
   const INITIAL_GOODS = {
     data: dataGoods,
-    selectedData: [] ,
-    idDataSet: Date.now()    
+    selectedData: [],
+    idDataSet: Date.now()
   };
   const [goods, setGoods] = useState(INITIAL_GOODS);
 
@@ -23,17 +23,17 @@ export default function Index({ dataGoods }) {
     }
     load();
   }, []);
-   
+
   console.log(goods);
   return (
     <GoodsContext.Provider value={{ goods, setGoods }}>
 
-      <SearchContext.Provider value={{ search, setSearch }}>
-        <MainLayout title={search.searchValue}>        
-          <Params />
-          <OfferLayout />        
-        </MainLayout>
-      </SearchContext.Provider>
+
+      <MainLayout title={search.searchValue}>
+        <Params />
+        <OfferLayout />
+      </MainLayout>
+
 
     </GoodsContext.Provider>
   );
